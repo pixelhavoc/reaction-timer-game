@@ -1,6 +1,7 @@
 <template>
   <h1>New App</h1>
   <button v-on:click="startGame" v-bind:disabled="isPlaying">Start Game</button>
+  <button v-on:click="alertMe">Alert Me</button>
 
   <Block v-if="isPlaying" v-bind:delay="delay" v-on:end="endGame"/>
 
@@ -40,6 +41,10 @@ export default {
       this.isPlaying = false;
       this.showResults = true;
 
+    },
+
+    alertMe () {
+      alert("Akash samose le kr aao");
     }
   }
 }
